@@ -19,7 +19,7 @@ const editTheTodo = e => {
     editTodo(id, updatedTodo)
      .then(response =>{
         console.log(response);
-        nav(`/view-todo/${id}`);
+        nav(`/${id}`);
      })
      .catch(error => console.log(error));
 }
