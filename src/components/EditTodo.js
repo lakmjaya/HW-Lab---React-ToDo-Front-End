@@ -11,14 +11,22 @@ export const EditTodo = () =>{
         getTodo(id) // getting the todo that matches this id
         .then(res => setData(res.data))
     }, [])
-}
+
 
 const editTheTodo = e => {
     e.preventDefault()
     const updatedTodo = {description: e.target.description.value, complete: e.target.complete.checked}
-    editTodo(id, updatedTodo);
-    nav(`/${id}`);
-    
+    editTodo(id, updatedTodo)
+     .then(response =>{
+        console.log(response);
+        nav(`/view-todo/${id}`);
+     })
+     .catch(error => console.log(error));
+}
+ 
+    // if (loading) {
+    //     return <h1> Loading.....</h1>
+    // }
     return (
         <div>
             <form onSubmit={editTheTodo}>
