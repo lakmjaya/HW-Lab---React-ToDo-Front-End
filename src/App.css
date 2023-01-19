@@ -2,10 +2,38 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list{
+  height: auto;
+  width: auto;
+  border-style: ridge;
+  background-color: antiquewhite;
+  list-style: none;
+  font-size: 20px;
 }
+
+body{
+  background-color: antiquewhite;
+  font-family: 'Daniel', sans-serif;
+}
+
+.todo{
+  display: inline-flex;
+  flex-direction: column;
+}
+.create-form{
+  height: 100px;
+  width: 400px;
+  border-style: ridge;
+  border-color: black;
+  background-color: rgb(238, 158, 38);
+  margin-bottom: 20px;
+
+}
+.completed{
+  text-decoration: line-through;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
